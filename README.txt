@@ -27,23 +27,11 @@
 
 Steps to compile the "gst-nvvidconv" sources natively:
 
-1) Install gstreamer related packages on target using the command:
 
-        sudo apt-get install libgstreamer1.0-dev \
-                gstreamer1.0-plugins-base \
-                gstreamer1.0-plugins-good \
-                libgstreamer-plugins-base1.0-dev
-
-2) Download and extract the package "gst-nvvidconv_src.tbz2" as follows:
-
-        tar -I lbzip2 -xvf gst-nvvidconv_src.tbz2
-
-3) Run the following commands to build and install "libgstnvvidconv.so":
-        cd "gst-nvvidconv"
+1) Run the following commands to build and install "libgstnvvidconv.so":
         make
-        make install
-        or
-        DEST_DIR=<dir> make install
+        sudo make install
+
 
   Note: "make install" will copy library "libgstnvvidconv.so"
   into "/usr/lib/aarch64-linux-gnu/gstreamer-1.0" directory.
